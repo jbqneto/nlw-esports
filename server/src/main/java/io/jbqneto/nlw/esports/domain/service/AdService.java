@@ -5,7 +5,6 @@ import io.jbqneto.nlw.esports.application.database.repository.AdRepository;
 import io.jbqneto.nlw.esports.application.database.repository.GameRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.HttpClientErrorException;
 
 import java.util.List;
 

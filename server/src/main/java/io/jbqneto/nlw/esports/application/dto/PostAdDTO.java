@@ -6,7 +6,6 @@ import io.jbqneto.nlw.esports.application.database.entity.Game;
 import io.jbqneto.nlw.esports.common.DateUtil;
 import lombok.Data;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
