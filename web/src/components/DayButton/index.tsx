@@ -1,3 +1,4 @@
+import * as ToggleGroup from "@radix-ui/react-toggle-group";
 
 const WEEK_DAYS = {
     'DOM': 'Domingo',
@@ -13,8 +14,8 @@ const days = ['DOM' , 'SEG' , 'TER' , 'QUA' , 'QUI' , 'SEX' , 'SAB'] as const;
 
 type Day = typeof days[number];
 
-interface Props {
-    day: Day,
+interface Props extends ToggleGroup.ToggleGroupItemProps {
+    value: Day
 }
 
 function getFullDay(day: Day): string {
@@ -25,9 +26,39 @@ function getCharDay(day: Day): string {
     return day.toString().charAt(0);
 }
 
-export function DayButton({day}: Props) {
-
-    return (
-        <button className='w-8 h-8 rounded bg-zinc-900' title={getFullDay(day)}>{getCharDay(day)}</button>
-    );
+interface IWeekDay {
+    char: string;
+    fullName: string;
+    value: string;
 }
+
+class WeekDay implements IWeekDay {
+    public char: string;
+    public fullName: string;
+    private _value: number;
+    
+    constructor(day: Day) {
+        this.char = getCharDay(day);
+        this.fullName = getFullDay(day);
+        this._value = Object.keys(WEEK_DAYS).indexOf(day);
+    }
+
+    public get value(): string {
+        return this._value.toString();
+    }
+
+    public get className() {
+        return 'w-8 h-8 rounded';
+    }
+
+    public getClassName(selectedWeekDays: string[]): string {
+        if (selectedWeekDays.includes(this.value)) {
+            return this.className + ' bg-violet-500';
+        } else {
+            return this.className + ' bg-zinc-900';
+        }
+    }
+
+}
+
+export const weekDays = days.map((day) => new WeekDay(day));

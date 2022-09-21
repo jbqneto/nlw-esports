@@ -23,8 +23,8 @@ public class GameController {
     private final AdService adService;
 
     @GetMapping(value = "/{id}/ads")
-    public ResponseEntity<List<GameAdDTO>> getGameAds(@PathVariable long id) {
-        var ads = adService.getGameAds(id)
+    public ResponseEntity<List<GameAdDTO>> getGameAds(@PathVariable Long id) {
+        var ads = adService.findAdsByGameId(id)
                 .stream().map(GameAdDTO::new)
                 .collect(Collectors.toList());
 
