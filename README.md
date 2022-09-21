@@ -5,15 +5,22 @@
 
 ## <img width="40" src="https://e7.pngegg.com/pngimages/574/164/png-clipart-react-computer-icons-redux-javascript-others-symmetry-electron.png"> Web
 
+Aplicação web, desenvolvida usando *React*
+
 Features:
 * [x] Listagem de games, exibindo quantidade de ADS vinculados ao mesmo
 * [x] Adicionar AD para um game
 
 ## <img style="vertical-align:middle" width="48" src="https://e7.pngegg.com/pngimages/574/164/png-clipart-react-computer-icons-redux-javascript-others-symmetry-electron.png"> Mobile
 
+Aplicação mobile, desenvolvida usando *React-Native*.
+
+Features:
+* [x] Listagem de games, exibindo quantidade de ADS vinculados
+* [x] Tela interna do game, exibindo detalhes dos ADS vinculados
+
 ## <img style="vertical-align:middle" width="48" src="https://cdn.icon-icons.com/icons2/2415/PNG/512/java_original_wordmark_logo_icon_146459.png"> Server
-Diferentemente do que foi feito nas aulas criei o back-end em Java, usando Spring Boot, com o intuito de praticar um pouco mais
-essa linguagem e esse framework com os quais já tenho experiência e tenho tido mais contato nos últimos anos.
+Diferentemente do que foi feito nas aulas o back-end foi feito em *Java*, usando *Spring Boot*.
 
 ### Próximas features:
 
